@@ -55,7 +55,7 @@ def sign_up():
             flash('Passwords don\'t match.', category='error')
         elif len(password1) < 7:
             flash('Password must be at least 7 characters.', category='error')
-        elif len(Lid) < 3:
+        elif len(Lid) < 6:
             flash('Lawyer id must be at least 4 characters.', category='error')
         else:
             new_user = User(email=email, first_name=first_name, password=generate_password_hash(
