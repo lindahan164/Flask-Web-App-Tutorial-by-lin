@@ -1,5 +1,17 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
+
+<style>
+  .open-frame {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+}
+</style>
+
+<body>
 <h1 align="center">התביעות הפתוחות</h1>
 <ul class="list-group list-group-flush" id="notes">
   {% for note in user.notes %}
@@ -11,9 +23,12 @@
   </li>
   {% endfor %}
 </ul>
-<h1 align="center">הוספת תביעה חדשה</h1>
-<form method="POST">
-  
+</body>
+
+
+
+<form method="POST" class="open-frame">
+  <h1 align="center">הוספת תביעה חדשה</h1>
   <div class="form-group">
     <label for="SCompany">חברה נתבעת</label>
     <input
@@ -35,16 +50,16 @@
     />
   </div>
   <div class="form-group">
-    <label for="Sstatus">סטטוס</label>
+    <label for="Status">סטטוס</label>
     <input
       type="text"
       class="form-control"
       id="Status"
-      name="Sstatus"
+      name="Status"
       placeholder="הכנס סטטוס"
     />
   </div>
-  <label for="Sstatus">פרטי תביעה</label>
+  <label for="Status">פרטי תביעה</label>
   <textarea name="note" id="note" class="form-control"></textarea>
   
   <br />
