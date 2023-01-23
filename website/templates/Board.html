@@ -1,5 +1,5 @@
 {% extends "base.html" %}{% block title %}Board{% endblock %} {% block content %}
-<h1 align ="center">תביעות</h1>
+<h1 align ="center">התביעות שלי</h1>
 
 <table style="margin-left: 20px;" cellpadding="10" cellspacing="0">
     
@@ -7,13 +7,13 @@
         <th>
              <tr style="color: black; ">
     
-            <th>id</th>
-            <th>data</th>
-            <th>date</th>
-            <th>email adress</th>
-            <th>SCompanyName</th>
-            <th>Status</th>
-            <th >email sender</th>
+            <th>מס תביעה</th>
+            <th>תאריך</th>
+            <th>פירוט על התביעה</th>
+            <th>מייל</th>
+            <th>חברה נתבעת</th>
+            <th>סטטוס</th>
+            <th >מייל לשליחה</th>
             
             </tr>
         </th>
@@ -23,10 +23,10 @@
                 {{note.id}}
              </td>
             <td>
-                {{note.data}}
+                {{note.date}}
              </td>
              <td>
-                {{note.date}}
+                {{note.data}}
             </td>
             <td>
                 {{user.email}}

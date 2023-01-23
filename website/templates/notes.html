@@ -32,7 +32,7 @@
           
           
           <a class="nav-item nav-link" id="notes" href="/notes">notes</a>
-          <a class="nav-item nav-link" id="Board" href="/Board">Board</a>
+          <a class="nav-item nav-link" id="info" href="/info">info</a>
           <a class="nav-item nav-link" id="login" href="/login">Login</a>
           <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
           
@@ -90,9 +90,9 @@
     <thead>
         <tr>
             <th>מס תביעה</th>
-            <th>פירוט על התביעה</th>
             <th>תאריך</th>
-            <th>מזהה משתמש</th>
+            <th>פירוט על התביעה</th>
+            <th>קוד עורך דין</th>
             <th>חברה נתבעת</th>
             <th>סטאטוס</th>
             <th>צור קשר</th>
@@ -102,8 +102,8 @@
         {% for note in notes %}
         <tr>
             <td>{{ note.id }}</td>
-            <td>{{ note.data }}</td>
             <td>{{ note.date }}</td>
+            <td>{{ note.data }}</td>
             <td>{{ note.user_id }}</td>
             <td>{{ note.SCompanyName }}</td>
             <td>{{ note.Status }}</td>

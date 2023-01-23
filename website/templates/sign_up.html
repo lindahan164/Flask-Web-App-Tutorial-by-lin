@@ -1,58 +1,69 @@
 {% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
 content %}
-<form method="POST">
-  <h3 align="center">Sign Up</h3>
+<style>
+  .signup-frame {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+}
+</style>
+<body>
+<form method="POST" class="signup-frame">
+  <h3 align="center">הרשמה למערכת</h3>
   <div class="form-group">
-    <label for="email">Email Address</label>
+    <label for="email">כתובת מייל</label>
     <input
       type="email"
       class="form-control"
       id="email"
       name="email"
-      placeholder="Enter email"
+      placeholder="הכנס מייל"
     />
   </div>
   <div class="form-group">
-    <label for="firstName">First Name</label>
+    <label for="firstName">שם</label>
     <input
       type="text"
       class="form-control"
       id="firstName"
       name="firstName"
-      placeholder="Enter first name"
+      placeholder="שם מלא"
     />
   </div>
   <div class="form-group">
-    <label for="password1">Password</label>
+    <label for="password1">סיסמא</label>
     <input
       type="password"
       class="form-control"
       id="password1"
       name="password1"
-      placeholder="Enter password"
+      placeholder="הכנס סיסמא"
     />
   </div>
   <div class="form-group">
-    <label for="password2">Password (Confirm)</label>
+    <label for="password2">אימות סיסמא</label>
     <input
       type="password"
       class="form-control"
       id="password2"
       name="password2"
-      placeholder="Confirm password"
-    />
+      placeholder="אימות סיסמא"
+      />
   </div>
   <div class="form-group">
-    <label for="Lid">lawyer id</label>
+    <label for="Lid">מס רישיון עורך דין</label>
     <input
       type="Lid"
       class="form-control"
       id="Lid"
       name="Lid"
-      placeholder="Enter lawyer id"
+      placeholder="הכנס מס רישיון"
     />
   </div>
   <br />
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">הרשם</button>
 </form>
 {% endblock %}
+</body>
