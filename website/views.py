@@ -50,3 +50,7 @@ def Board():
 def notes():
     notes = Note.query.all()
     return render_template('notes.html', notes=notes)
+
+@views.route('/info')
+def info():
+    return render_template('info.html')
