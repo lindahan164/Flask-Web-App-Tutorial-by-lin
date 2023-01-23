@@ -1,0 +1,47 @@
+{% extends "base.html" %}{% block title %}Board{% endblock %} {% block content %}
+<h1 align ="center">תביעות</h1>
+
+<table style="margin-left: 20px;" cellpadding="10" cellspacing="0">
+    
+    <!-- Table headers -->
+        <th>
+             <tr style="color: black; ">
+    
+            <th>id</th>
+            <th>data</th>
+            <th>date</th>
+            <th>email adress</th>
+            <th>SCompanyName</th>
+            <th>Status</th>
+            <th >email sender</th>
+            
+            </tr>
+        </th>
+    {%for note in user.notes %}
+        <tr class="spacer">
+            <td>
+                {{note.id}}
+             </td>
+            <td>
+                {{note.data}}
+             </td>
+             <td>
+                {{note.date}}
+            </td>
+            <td>
+                {{user.email}}
+            </td>
+            <td>
+                {{note.SCompanyName}}
+            </td>
+            <td>
+                {{note.status}}
+            </td>
+            <td>
+                <button onclick="window.location.href = 'mailto:example@email.com';">Send Email</button>
+            </td>
+        </tr> 
+    {%endfor%}
+           
+</table>
+{% endblock %}
